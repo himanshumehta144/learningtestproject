@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function userList()
     {
-        $users = User::all();
+        $users = User::get();
 
         return response()->json(['status' => true, 'message' => 'Success', 'data' => $users]);
     }
